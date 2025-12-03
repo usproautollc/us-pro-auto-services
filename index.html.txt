@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>US Pro Auto Services - OEM Diagnostics & Module Programming</title>
+    <!-- Load Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use Inter font family for a professional look -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        /* Custom scrollbar for aesthetics */
+        body::-webkit-scrollbar {
+            width: 8px;
+        }
+        body::-webkit-scrollbar-thumb {
+            background-color: #3b82f6; /* Blue 500 */
+            border-radius: 4px;
+        }
+        body::-webkit-scrollbar-track {
+            background-color: #0f172a; /* Slate 900 */
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Dark mode background
+                        'tech-dark': '#0f172a', // Slate 900
+                        // Section/Card background
+                        'tech-mid': '#1e293b', // Slate 800
+                        // Primary Accent Color (Professional Blue)
+                        'accent-blue': '#3b82f6', // Blue 500
+                        // Light text/icon accent
+                        'accent-light': '#93c5fd', // Blue 300
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-tech-dark text-gray-100 antialiased">
+
+    <!-- Navbar -->
+    <header class="sticky top-0 z-50 bg-tech-dark/95 backdrop-blur-sm shadow-xl">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#home" class="flex-shrink-0 text-2xl font-extrabold text-accent-blue tracking-tight transition duration-300">
+                    US PRO AUTO <span class="text-white">SERVICES</span>
+                </a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#services" class="text-gray-300 hover:bg-tech-mid hover:text-white px-3 py-2 rounded-lg text-sm font-medium transition duration-300">Core Services</a>
+                        <a href="#specialization" class="text-gray-300 hover:bg-tech-mid hover:text-white px-3 py-2 rounded-lg text-sm font-medium transition duration-300">Specialization</a>
+                        <a href="#why-us" class="text-gray-300 hover:bg-tech-mid hover:text-white px-3 py-2 rounded-lg text-sm font-medium transition duration-300">Why Choose Us</a>
+                        <a href="#contact" class="text-gray-300 hover:bg-tech-mid hover:text-white px-3 py-2 rounded-lg text-sm font-medium transition duration-300">Contact</a>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="menu-button" type="button" class="bg-tech-mid inline-flex items-center justify-center p-2 rounded-lg text-gray-400 hover:text-white hover:bg-tech-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-tech-dark focus:ring-accent-blue" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <!-- Hamburger Icon -->
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <!-- Close Icon (Hidden initially) -->
+                        <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#services" class="text-gray-300 hover:bg-tech-mid hover:text-white block px-3 py-2 rounded-lg text-base font-medium transition duration-300">Core Services</a>
+                <a href="#specialization" class="text-gray-300 hover:bg-tech-mid hover:text-white block px-3 py-2 rounded-lg text-base font-medium transition duration-300">Specialization</a>
+                <a href="#why-us" class="text-gray-300 hover:bg-tech-mid hover:text-white block px-3 py-2 rounded-lg text-base font-medium transition duration-300">Why Choose Us</a>
+                <a href="#contact" class="text-gray-300 hover:bg-tech-mid hover:text-white block px-3 py-2 rounded-lg text-base font-medium transition duration-300">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="relative overflow-hidden pt-24 pb-32 lg:pt-40 lg:pb-48 bg-tech-dark">
+            <!-- Background Image: High-End Supercar -->
+            <div class="absolute inset-0 opacity-[0.10] pointer-events-none">
+                <!-- Using the uploaded Bentley.webp image for the hero background -->
+                <img src="super.jpg" 
+                     alt="Blue high-end supercar on a racetrack, symbolizing performance and precision." 
+                     class="w-full h-full object-cover object-center">
+            </div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center">
+                    <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-snug">
+                        Dealership Capability. <span class="text-accent-blue block mt-2">Independent Efficiency.</span>
+                    </h1>
+                    <p class="mt-6 max-w-3xl mx-auto text-xl text-gray-300">
+                        The full-service automotive diagnostics and module programming company specializing in complex electrical systems and **OEM-level programming**. Serving the greater Sacramento region.
+                    </p>
+                    <div class="mt-10 flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                        <a href="#services" class="inline-flex items-center justify-center px-10 py-3 border border-transparent text-lg font-semibold rounded-xl shadow-lg text-white bg-accent-blue hover:bg-blue-700 transition duration-300 transform hover:scale-105">
+                            View Core Services
+                        </a>
+                        <a href="#contact" class="inline-flex items-center justify-center px-10 py-3 border border-gray-600 text-lg font-medium rounded-xl shadow-lg text-gray-300 bg-tech-mid hover:bg-gray-700 transition duration-300 transform hover:scale-105">
+                            Request Technical Support
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Services Section -->
+        <section id="services" class="py-20 bg-tech-mid">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-base text-accent-blue font-semibold tracking-wide uppercase">Core Expertise</h2>
+                    <p class="mt-2 text-4xl font-extrabold text-white sm:text-5xl">
+                        Advanced Diagnostics & OEM Programming
+                    </p>
+                    <p class="mt-4 max-w-3xl text-xl text-gray-400 mx-auto">
+                        We resolve the most complex electrical and electronic automotive issues for independent repair shops, dealerships, and luxury vehicle owners.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 gap-10 lg:grid-cols-3">
+                    <!-- Service 1: Advanced Diagnostics -->
+                    <div class="bg-tech-dark p-8 rounded-2xl shadow-xl border-t-4 border-accent-blue transform hover:scale-[1.02] transition duration-300 group">
+                        <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-accent-light transition duration-300">1. Advanced Diagnostics</h3>
+                        <p class="text-gray-400 mb-4">
+                            Focusing on root-cause analysis for complex system resolution, minimizing downtime and trial-and-error costs.
+                        </p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-300 ml-2 text-sm">
+                            <li>Powertrain, Transmission, and Hybrid Systems troubleshooting.</li>
+                            <li>CAN Network Tracing and comprehensive data analysis.</li>
+                            <li>In-depth electrical system and wiring diagnostics.</li>
+                            <li>Resolving Module Communication Issues and protocol errors.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Service 2: OEM Programming & Coding -->
+                    <div class="bg-tech-dark p-8 rounded-2xl shadow-xl border-t-4 border-accent-blue transform hover:scale-[1.02] transition duration-300 group">
+                        <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-accent-light transition duration-300">2. OEM Programming & Coding</h3>
+                        <p class="text-gray-400 mb-4">
+                            Utilizing genuine factory tools to ensure proper component function and dealer compliance.
+                        </p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-300 ml-2 text-sm">
+                            <li>ECU/TCU/BCM/PCM Programming and Replacement.</li>
+                            <li>Mandatory OEM Flash Updates and software upgrades.</li>
+                            <li>VIN writing, parameter resets, and adaptation setting.</li>
+                            <li>Broad OEM Software Access (Xentry, ISTA, ODIS, FDRS, etc.).</li>
+                        </ul>
+                    </div>
+
+                    <!-- Service 3: Immobilizer & High-End -->
+                    <div class="bg-tech-dark p-8 rounded-2xl shadow-xl border-t-4 border-accent-blue transform hover:scale-[1.02] transition duration-300 group">
+                        <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-accent-light transition duration-300">3. Immobilizer & Components</h3>
+                        <p class="text-gray-400 mb-4">
+                            Authorized services for anti-theft systems and targeted replacement of complex modules.
+                        </p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-300 ml-2 text-sm">
+                            <li>NASTF LSID Authorized Key and Immobilizer Programming.</li>
+                            <li>Module replacement requiring immobilizer alignment.</li>
+                            <li>Mechanical & Component Replacement (Control Units, Sensors).</li>
+                            <li>Specialized sensor, actuator, and electrical component installation.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- High-End & ADAS Specialization Section -->
+        <section id="specialization" class="py-20 bg-tech-dark">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="lg:grid lg:grid-cols-2 lg:gap-16 lg:items-center">
+                    <!-- Text Content -->
+                    <div class="order-2 lg:order-1 mt-12 lg:mt-0">
+                        <h2 class="text-base text-accent-blue font-semibold tracking-wide uppercase">Precision Technology</h2>
+                        <h3 class="mt-2 text-3xl font-extrabold text-white sm:text-4xl">
+                            Exotic Marque & ADAS Systems Expertise
+                        </h3>
+                        <p class="mt-4 text-lg text-gray-300">
+                            Our capability extends to the most elite performance and luxury brands, addressing highly specific software and hardware needs. We ensure your high-end vehicle performs exactly as the manufacturer intended.
+                        </p>
+                        
+                        <div class="mt-8 space-y-4 text-gray-300">
+                            <div class="flex items-start space-x-3">
+                                <svg class="flex-shrink-0 h-6 w-6 text-accent-blue mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1v-3m-6.49-5h3.98l2-2h-7.98l2 2zM12 2a4 4 0 00-4 4v4a4 4 0 008 0V6a4 4 0 00-4-4z"></path></svg>
+                                <p><span class="font-bold text-white">High-End Diagnostics:</span> Specialized services for Lamborghini, Ferrari, Bentley, Rolls-Royce, McLaren, Maserati, Porsche.</p>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <svg class="flex-shrink-0 h-6 w-6 text-accent-blue mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13l-3 3m0 0l-3-3m3 3V8m0 16a12 12 0 110-24 12 12 0 010 24z"></path></svg>
+                                <p><span class="font-bold text-white">ADAS Calibration:</span> Accurate calibration of Advanced Driver-Assistance Systems (cameras, sensors, radar) following component replacement or collision repair.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Image: ADAS Calibration Graphic -->
+                    <div class="order-1 lg:order-2 rounded-2xl overflow-hidden shadow-2xl">
+                        <!-- Using the uploaded download.avif image for the ADAS section -->
+                        <img src="adas.avif" 
+                             alt="Graphic visualization of ADAS sensor and radar fields between two vehicles on a highway." 
+                             class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- OEM Capability Section (Logos/Brands & Equipment Image) -->
+        <section id="capabilities" class="py-16 bg-tech-mid">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-base text-accent-blue font-semibold tracking-wide uppercase">Unmatched Access</h2>
+                <p class="mt-2 text-3xl font-extrabold text-white sm:text-4xl">
+                    Genuine OEM Factory Software & Tooling
+                </p>
+                <p class="mt-4 max-w-3xl text-lg text-gray-400 mx-auto">
+                    We invest in the necessary equipment and licensing to ensure every service meets dealer compliance and quality standards.
+                </p>
+                
+                <!-- Placeholder Image: Diagnostic Equipment/Tech Photo (Keeping placeholder as no third image was provided) -->
+                <div class="max-w-6xl mx-auto my-12 rounded-2xl overflow-hidden shadow-2xl">
+                    <img src="https://placehold.co/1200x350/0f172a/93c5fd?text=Technician+Using+Advanced+Diagnostic+Equipment" 
+                         alt="Technician performing diagnostics on a vehicle" 
+                         class="w-full h-full object-cover object-center">
+                </div>
+
+                <!-- Mock Logo/Brand Grid based on the PDF list -->
+                <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <!-- Brand 1: Mercedes/AMG -->
+                    <div class="p-4 bg-tech-dark rounded-lg shadow-md hover:shadow-accent-blue/50 transition duration-300">
+                        <p class="text-xl font-bold text-white">Mercedes / Xentry</p>
+                        <p class="text-sm text-gray-400">Luxury & AMG Performance</p>
+                    </div>
+                    <!-- Brand 2: BMW/M -->
+                    <div class="p-4 bg-tech-dark rounded-lg shadow-md hover:shadow-accent-blue/50 transition duration-300">
+                        <p class="text-xl font-bold text-white">BMW / ISTA</p>
+                        <p class="text-sm text-gray-400">Luxury & M Performance</p>
+                    </div>
+                    <!-- Brand 3: VW/Audi/Exotic -->
+                    <div class="p-4 bg-tech-dark rounded-lg shadow-md hover:shadow-accent-blue/50 transition duration-300">
+                        <p class="text-xl font-bold text-white">VAG Group / ODIS</p>
+                        <p class="text-sm text-gray-400">VW, Audi, Lamborghini</p>
+                    </div>
+                    <!-- Brand 4: Ford/GM -->
+                    <div class="p-4 bg-tech-dark rounded-lg shadow-md hover:shadow-accent-blue/50 transition duration-300">
+                        <p class="text-xl font-bold text-white">Ford / GM</p>
+                        <p class="text-sm text-gray-400">FDRS, IDS, SPS2 Access</p>
+                    </div>
+                    <!-- Brand 5: JLR / Porsche -->
+                    <div class="p-4 bg-tech-dark rounded-lg shadow-md hover:shadow-accent-blue/50 transition duration-300">
+                        <p class="text-xl font-bold text-white">JLR & Porsche</p>
+                        <p class="text-sm text-gray-400">Pathfinder Diagnostics</p>
+                    </div>
+                    <!-- Brand 6: Honda/Nissan/Toyota -->
+                    <div class="p-4 bg-tech-dark rounded-lg shadow-md hover:shadow-accent-blue/50 transition duration-300">
+                        <p class="text-xl font-bold text-white">Asian Imports</p>
+                        <p class="text-sm text-gray-400">HDS, CONSULT, Techstream</p>
+                    </div>
+                    <!-- Brand 7: High-End Tools -->
+                    <div class="p-4 bg-tech-dark rounded-lg shadow-md hover:shadow-accent-blue/50 transition duration-300 col-span-2 md:col-span-1">
+                        <p class="text-xl font-bold text-white">Diagnostic Tools</p>
+                        <p class="text-sm text-gray-400">Oscilloscopes & J2534</p>
+                    </div>
+                    <!-- Brand 8: Certifications -->
+                    <div class="p-4 bg-accent-blue rounded-lg shadow-md hover:shadow-white/50 transition duration-300 col-span-2 md:col-span-1">
+                        <p class="text-xl font-bold text-white">NASTF LSID</p>
+                        <p class="text-sm text-white/80">Authorized & Certified</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section id="why-us" class="py-20 bg-tech-dark">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="lg:grid lg:grid-cols-2 lg:gap-12 lg:items-center">
+                    <div class="relative">
+                         <div class="p-8 bg-tech-mid rounded-2xl shadow-2xl border-l-8 border-accent-blue">
+                            <p class="text-4xl font-extrabold text-accent-light mb-4">"High Accuracy Diagnostics minimize trial-and-error, significantly reducing vehicle downtime."</p>
+                            <p class="text-lg text-gray-400">— Core Value Proposition</p>
+                            <div class="mt-4 text-gray-500 text-sm">
+                                BAR Licensed | Trusted Partner to Dealerships & Body Shops
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-12 lg:mt-0">
+                        <h2 class="text-base text-accent-blue font-semibold tracking-wide uppercase">The US Pro Advantage</h2>
+                        <h3 class="mt-2 text-3xl font-extrabold text-white sm:text-4xl">
+                            Specializing in the Hardest Electrical Problems
+                        </h3>
+                        <div class="mt-6 space-y-6 text-lg text-gray-300">
+                            <!-- Advantage 1 -->
+                            <div class="flex items-start space-x-3">
+                                <svg class="flex-shrink-0 h-6 w-6 text-accent-blue mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697A6 6 0 0015.303 8H21v12a2 2 0 01-2 2H5a2 2 0 01-2-2V8h6.835z"></path></svg>
+                                <p><span class="font-bold text-white">Dealership-Level Service:</span> Technical depth and proprietary software access at a competitive independent shop price point.</p>
+                            </div>
+                             <!-- Advantage 2 -->
+                            <div class="flex items-start space-x-3">
+                                <svg class="flex-shrink-0 h-6 w-6 text-accent-blue mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.657 0 3-.895 3-2s-1.343-2-3-2-3 .895-3 2 1.343 2 3 2zM9 16c1.657 0 3-.895 3-2s-1.343-2-3-2-3 .895-3 2 1.343 2 3 2zM15 16c1.657 0 3-.895 3-2s-1.343-2-3-2-3 .895-3 2 1.343 2 3 2zM12 21c-1.657 0-3-.895-3-2s1.343-2 3-2 3 .895 3 2-1.343 2-3 2z"></path></svg>
+                                <p><span class="font-bold text-white">Cutting-Edge Equipment:</span> Utilizing Advanced Oscilloscopes, J2534 tools, and dedicated Network Diagnostic systems.</p>
+                            </div>
+                            <!-- Advantage 3 -->
+                            <div class="flex items-start space-x-3">
+                                <svg class="flex-shrink-0 h-6 w-6 text-accent-blue mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                                <p><span class="font-bold text-white">Fast Turnaround:</span> Priority service for fleet operators and critical repairs to get vehicles back on the road quickly.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-tech-mid">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-base text-accent-blue font-semibold tracking-wide uppercase">Contact & Scheduling</h2>
+                    <p class="mt-2 text-3xl font-extrabold text-white sm:text-4xl">
+                        Schedule Your Specialized Service
+                    </p>
+                    <p class="mt-4 text-xl text-gray-400">
+                        Serving independent repair shops, dealerships, fleets, and owners of exotic/luxury vehicles in the greater Sacramento region.
+                    </p>
+                </div>
+
+                <div class="bg-tech-dark p-8 md:p-12 rounded-2xl shadow-xl border border-gray-700">
+                    <form action="#" method="POST" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-300">Name / Shop Name</label>
+                            <input type="text" id="name" name="name" required class="mt-1 block w-full px-4 py-3 border border-gray-600 rounded-lg shadow-sm focus:ring-accent-blue focus:border-accent-blue bg-tech-mid text-white placeholder-gray-500">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-300">Email Address</label>
+                            <input type="email" id="email" name="email" required class="mt-1 block w-full px-4 py-3 border border-gray-600 rounded-lg shadow-sm focus:ring-accent-blue focus:border-accent-blue bg-tech-mid text-white placeholder-gray-500">
+                        </div>
+                        <div>
+                            <label for="inquiry-type" class="block text-sm font-medium text-gray-300">Inquiry Type</label>
+                            <select id="inquiry-type" name="inquiry-type" required class="mt-1 block w-full px-4 py-3 border border-gray-600 rounded-lg shadow-sm focus:ring-accent-blue focus:border-accent-blue bg-tech-mid text-white placeholder-gray-500">
+                                <option class="bg-tech-dark" value="">-- Select Service Needed --</option>
+                                <option class="bg-tech-dark" value="diagnostics">Advanced Diagnostics</option>
+                                <option class="bg-tech-dark" value="oem-programming">OEM Programming / Coding</option>
+                                <option class="bg-tech-dark" value="immobilizer">Immobilizer / Key Service</option>
+                                <option class="bg-tech-dark" value="exotic">High-End & Exotic Diagnostics (Supercars)</option>
+                                <option class="bg-tech-dark" value="adas">ADAS Calibration</option>
+                                <option class="bg-tech-dark" value="general">General Inquiry</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="details" class="block text-sm font-medium text-gray-300">Vehicle Make/Model & Issue Details</label>
+                            <textarea id="details" name="details" rows="4" required class="mt-1 block w-full px-4 py-3 border border-gray-600 rounded-lg shadow-sm focus:ring-accent-blue focus:border-accent-blue bg-tech-mid text-white placeholder-gray-500"></textarea>
+                        </div>
+                        <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-xl shadow-lg text-lg font-semibold text-white bg-accent-blue hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-tech-dark focus:ring-accent-blue transition duration-300 transform hover:scale-[1.01]">
+                            Submit Service Request
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-tech-dark border-t border-gray-700">
+        <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left space-y-4 md:space-y-0">
+                <p class="text-sm text-gray-400">&copy; 2025 US Pro Auto Services. Founded by Vitalii Tarasenko.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-accent-blue transition duration-300 text-sm">BAR Licensed</a>
+                    <a href="#" class="text-gray-400 hover:text-accent-blue transition duration-300 text-sm">NASTF LSID Authorized</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu Functionality -->
+    <script>
+        const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuButton.addEventListener('click', () => {
+            const isExpanded = menuButton.getAttribute('aria-expanded') === 'true' || false;
+            menuButton.setAttribute('aria-expanded', !isExpanded);
+            
+            // Toggle hamburger/close icons
+            const [hamburger, closeIcon] = menuButton.querySelectorAll('svg');
+            hamburger.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuButton.setAttribute('aria-expanded', 'false');
+                
+                // Ensure icons are reset to hamburger
+                const [hamburger, closeIcon] = menuButton.querySelectorAll('svg');
+                hamburger.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
