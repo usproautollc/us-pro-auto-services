@@ -1,3 +1,379 @@
 <!DOCTYPE html>
-<!-- The full cleaned index.html content the assistant wrote above -->
-(Your content goes here — replaced for clarity in this preview)
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>US Pro Auto Services - OEM Diagnostics & Module Programming</title>
+
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Font -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        /* Custom scrollbar */
+        body::-webkit-scrollbar {
+            width: 8px;
+        }
+        body::-webkit-scrollbar-thumb {
+            background-color: #3b82f6;
+            border-radius: 4px;
+        }
+        body::-webkit-scrollbar-track {
+            background-color: #0f172a;
+        }
+    </style>
+
+    <!-- Tailwind Custom Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'tech-dark': '#0f172a',
+                        'tech-mid': '#1e293b',
+                        'accent-blue': '#3b82f6',
+                        'accent-light': '#93c5fd',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-tech-dark text-gray-100 antialiased">
+
+    <!-- Navbar -->
+    <header class="sticky top-0 z-50 bg-tech-dark/95 backdrop-blur-sm shadow-xl">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+
+                <!-- Logo -->
+                <a href="#home" class="flex-shrink-0 text-2xl font-extrabold text-accent-blue tracking-tight transition duration-300">
+                    US PRO AUTO <span class="text-white">SERVICES</span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#services" class="nav-btn">Core Services</a>
+                        <a href="#specialization" class="nav-btn">Specialization</a>
+                        <a href="#why-us" class="nav-btn">Why Choose Us</a>
+                        <a href="#contact" class="nav-btn">Contact</a>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="menu-button" type="button"
+                        class="bg-tech-mid inline-flex items-center justify-center p-2 rounded-lg text-gray-400 hover:text-white hover:bg-tech-dark focus:outline-none">
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"/></svg>
+
+                        <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12"/></svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#services" class="mobile-btn">Core Services</a>
+                <a href="#specialization" class="mobile-btn">Specialization</a>
+                <a href="#why-us" class="mobile-btn">Why Choose Us</a>
+                <a href="#contact" class="mobile-btn">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Hero -->
+        <section id="home" class="relative overflow-hidden pt-24 pb-32 lg:pt-40 lg:pb-48 bg-tech-dark">
+            <div class="absolute inset-0 opacity-[0.12] pointer-events-none">
+                <img src="super.jpg" alt="Supercar Image" class="w-full h-full object-cover object-center">
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold leading-snug">
+                    Dealership Capability.
+                    <span class="text-accent-blue block mt-2">Independent Efficiency.</span>
+                </h1>
+
+                <p class="mt-6 max-w-3xl mx-auto text-xl text-gray-300">
+                    Full-service automotive diagnostics and OEM-level module programming.
+                </p>
+
+                <div class="mt-10 flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                    <a href="#services" class="hero-btn-primary">View Core Services</a>
+                    <a href="#contact" class="hero-btn-secondary">Request Technical Support</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Services -->
+        <section id="services" class="py-20 bg-tech-mid">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                <div class="text-center mb-16">
+                    <h2 class="section-label">Core Expertise</h2>
+                    <p class="section-title">Advanced Diagnostics & OEM Programming</p>
+                    <p class="section-description">
+                        We resolve the most complex automotive electrical issues for shops and luxury vehicle owners.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 gap-10 lg:grid-cols-3">
+
+                    <!-- Service 1 -->
+                    <div class="service-card">
+                        <h3 class="service-title">1. Advanced Diagnostics</h3>
+                        <p class="service-text">Precision troubleshooting for complex vehicle systems.</p>
+                        <ul class="service-list">
+                            <li>Powertrain & Hybrid Diagnostics</li>
+                            <li>CAN Network Tracing</li>
+                            <li>Electrical & Wiring Troubleshooting</li>
+                            <li>Module Communication Issues</li>
+                        </ul>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="service-card">
+                        <h3 class="service-title">2. OEM Programming & Coding</h3>
+                        <p class="service-text">Factory-level software and module configuration.</p>
+                        <ul class="service-list">
+                            <li>ECU/TCU/BCM Programming</li>
+                            <li>OEM Flash Updates</li>
+                            <li>VIN Writing & Adaptations</li>
+                            <li>ISTA, Xentry, ODIS, FDRS Access</li>
+                        </ul>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="service-card">
+                        <h3 class="service-title">3. Immobilizer & Components</h3>
+                        <p class="service-text">Authorized immobilizer, key, and module alignment services.</p>
+                        <ul class="service-list">
+                            <li>NASTF LSID Authorized</li>
+                            <li>Immobilizer Alignment</li>
+                            <li>Component Replacement</li>
+                            <li>Sensor & Actuator Setup</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Specialization -->
+        <section id="specialization" class="py-20 bg-tech-dark">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:grid lg:grid-cols-2 lg:gap-16 lg:items-center">
+
+                <!-- Text -->
+                <div class="order-2 lg:order-1 mt-12 lg:mt-0">
+                    <h2 class="section-label">Precision Technology</h2>
+                    <h3 class="section-title">Exotic Marque & ADAS Systems Expertise</h3>
+                    <p class="text-lg text-gray-300 mt-4">
+                        Specializing in Lamborghini, Ferrari, Bentley, Rolls-Royce, McLaren, and more.
+                    </p>
+
+                    <div class="mt-8 space-y-4 text-gray-300">
+
+                        <div class="flex items-start space-x-3">
+                            <svg class="icon-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9.75 17L9 20l-1 1h8l-1-1v-3m-6.49-5h3.98l2-2h-7.98l2 2zM12 2a4 4 0 00-4 4v4a4 4 0 008 0V6a4 4 0 00-4-4z" />
+                            </svg>
+                            <p><span class="font-bold text-white">High-End Diagnostics:</span> Full exotic brand support.</p>
+                        </div>
+
+                        <div class="flex items-start space-x-3">
+                            <svg class="icon-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 13l-3 3m0 0l-3-3m3 3V8m0 16a12 12 0 110-24 12 12 0 010 24z" />
+                            </svg>
+                            <p><span class="font-bold text-white">ADAS Calibration:</span> Radar, camera, and sensor setup.</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Image -->
+                <div class="order-1 lg:order-2 rounded-2xl overflow-hidden shadow-2xl">
+                    <img src="adas.avif" alt="ADAS Calibration Image" class="w-full h-full object-cover">
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Capabilities -->
+        <section id="capabilities" class="py-16 bg-tech-mid">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+
+                <h2 class="section-label">Unmatched Access</h2>
+                <p class="section-title">Genuine OEM Factory Software & Tooling</p>
+                <p class="section-description">Dealer-level tools and licensed factory software.</p>
+
+                <div class="max-w-6xl mx-auto my-12 rounded-2xl overflow-hidden shadow-2xl">
+                    <img src="https://placehold.co/1200x350/0f172a/93c5fd?text=Technician+Using+Advanced+Diagnostics"
+                        class="w-full h-full object-cover" alt="">
+                </div>
+
+                <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div class="brand-card">Mercedes / Xentry</div>
+                    <div class="brand-card">BMW / ISTA</div>
+                    <div class="brand-card">VAG / ODIS</div>
+                    <div class="brand-card">Ford / GM</div>
+                    <div class="brand-card">JLR / Porsche</div>
+                    <div class="brand-card">Honda / Toyota</div>
+                    <div class="brand-card">Oscilloscopes & J2534</div>
+                    <div class="brand-card bg-accent-blue text-white">NASTF LSID</div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Why Us -->
+        <section id="why-us" class="py-20 bg-tech-dark">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:grid lg:grid-cols-2 lg:gap-12 lg:items-center">
+
+                <div>
+                    <div class="p-8 bg-tech-mid rounded-2xl shadow-2xl border-l-8 border-accent-blue">
+                        <p class="text-4xl font-extrabold text-accent-light mb-4">
+                            "High accuracy diagnostics reduce downtime dramatically."
+                        </p>
+                        <p class="text-lg text-gray-400">— Core Value Proposition</p>
+                        <p class="text-sm text-gray-500 mt-4">BAR Licensed | Trusted by Dealerships</p>
+                    </div>
+                </div>
+
+                <div class="mt-12 lg:mt-0">
+                    <h2 class="section-label">The US Pro Advantage</h2>
+                    <h3 class="section-title">Specializing in the Hardest Problems</h3>
+
+                    <div class="mt-6 space-y-6 text-lg text-gray-300">
+                        <div class="adv-item">Dealership-level service at independent pricing.</div>
+                        <div class="adv-item">Cutting-edge oscilloscopes and diagnostic tooling.</div>
+                        <div class="adv-item">Fast turnaround for critical repairs & fleets.</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="py-20 bg-tech-mid">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+
+                <h2 class="section-label">Contact & Scheduling</h2>
+                <p class="section-title">Schedule Your Specialized Service</p>
+                <p class="section-description">Serving Sacramento & surrounding regions.</p>
+
+                <div class="bg-tech-dark p-8 md:p-12 rounded-2xl shadow-xl border border-gray-700 mt-12">
+
+                    <form action="#" method="POST" class="space-y-6">
+                        <div>
+                            <label class="form-label">Name / Shop Name</label>
+                            <input type="text" required class="form-input">
+                        </div>
+
+                        <div>
+                            <label class="form-label">Email Address</label>
+                            <input type="email" required class="form-input">
+                        </div>
+
+                        <div>
+                            <label class="form-label">Inquiry Type</label>
+                            <select required class="form-input">
+                                <option value="">-- Select Service Needed --</option>
+                                <option>Advanced Diagnostics</option>
+                                <option>OEM Programming / Coding</option>
+                                <option>Immobilizer / Key Service</option>
+                                <option>Exotic Diagnostics</option>
+                                <option>ADAS Calibration</option>
+                                <option>General Inquiry</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="form-label">Vehicle / Issue Details</label>
+                            <textarea rows="4" required class="form-input"></textarea>
+                        </div>
+
+                        <button type="submit"
+                            class="w-full py-3 px-4 rounded-xl shadow-lg text-lg font-semibold text-white bg-accent-blue hover:bg-blue-700 transition duration-300">
+                            Submit Service Request
+                        </button>
+                    </form>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-tech-dark border-t border-gray-700">
+        <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center text-center md:text-left space-y-4 md:space-y-0">
+            <p class="text-sm text-gray-400">&copy; 2025 US Pro Auto Services. Founded by Vitalii Tarasenko.</p>
+            <div class="flex space-x-6">
+                <span class="text-gray-400 text-sm">BAR Licensed</span>
+                <span class="text-gray-400 text-sm">NASTF LSID Authorized</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuButton.addEventListener('click', () => {
+            const [hamburger, closeIcon] = menuButton.querySelectorAll('svg');
+            hamburger.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                const [hamburger, closeIcon] = menuButton.querySelectorAll('svg');
+                hamburger.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+            });
+        });
+    </script>
+
+    <!-- Utility Classes -->
+    <style>
+        .nav-btn { text-gray-300 hover:bg-tech-mid hover:text-white px-3 py-2 rounded-lg text-sm transition duration-300; }
+        .mobile-btn { display:block; padding:10px; color:#ccc; }
+        .hero-btn-primary { padding:12px 40px; background:#3b82f6; color:#fff; border-radius:12px; }
+        .hero-btn-secondary { padding:12px 40px; background:#1e293b; color:#ccc; border-radius:12px; }
+        .section-label { color:#3b82f6; font-weight:600; text-transform:uppercase; }
+        .section-title { font-size:2.2rem; font-weight:800; color:#fff; }
+        .section-description { max-width:700px; margin:8px auto; color:#aaa; }
+        .service-card { background:#0f172a; padding:30px; border-radius:20px; border-top:4px solid #3b82f6; }
+        .service-title { font-size:1.5rem; font-weight:700; margin-bottom:10px; }
+        .service-text { color:#ccc; margin-bottom:14px; }
+        .service-list li { color:#bbb; margin-left:12px; margin-bottom:6px; }
+        .icon-blue { width:26px; height:26px; color:#3b82f6; flex-shrink:0; margin-top:4px; }
+        .brand-card { padding:20px; background:#0f172a; border-radius:12px; font-weight:700; color:#fff; }
+        .adv-item { display:flex; align-items:center; gap:10px; }
+        .form-label { display:block; margin-bottom:6px; color:#ccc; text-align:left; }
+        .form-input { width:100%; padding:12px; background:#1e293b; border:1px solid #444; border-radius:10px; color:#fff; }
+    </style>
+
+</body>
+</html>
+
