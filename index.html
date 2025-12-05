@@ -355,55 +355,82 @@
             </div>
         </section>
 
-        <!-- Contact -->
-        <section id="contact" class="py-20 bg-tech-mid">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<!-- Contact -->
+<section id="contact" class="py-20 bg-tech-mid">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 
-                <h2 class="section-label">Contact & Scheduling</h2>
-                <p class="section-title">CALL US (916)-542-0828 OR Schedule Your Specialized Service</p>
-                <p class="section-description">Serving Sacramento & surrounding regions.</p>
+        <h2 class="section-label">Contact & Scheduling</h2>
+        <p class="section-title">CALL US (916)-542-0828 OR Schedule Your Specialized Service</p>
+        <p class="section-description">Serving Sacramento & surrounding regions.</p>
 
-                <div class="bg-tech-dark p-8 md:p-12 rounded-2xl shadow-xl border border-gray-700 mt-12">
+        <div class="bg-tech-dark p-8 md:p-12 rounded-2xl shadow-xl border border-gray-700 mt-12">
 
-                    <form action="https://formspree.io/f/mjkn0jyk" method="POST" class="space-y-6">
-                        <div>
-                            <label class="form-label">Name / Shop Name</label>
-                            <input type="text" required class="form-input">
-                        </div>
+            <!-- FIXED FORM -->
+            <form action="https://formspree.io/f/mjkn0jyk" method="POST" class="space-y-6">
 
-                        <div>
-                            <label class="form-label">Email Address</label>
-                            <input type="email" required class="form-input">
-                        </div>
-
-                        <div>
-                            <label class="form-label">Inquiry Type</label>
-                            <select required class="form-input">
-                                <option value="">-- Select Service Needed --</option>
-                                <option>Advanced Diagnostics</option>
-                                <option>OEM Programming / Coding</option>
-                                <option>Immobilizer / Key Service</option>
-                                <option>Exotic Diagnostics</option>
-                                <option>ADAS Calibration</option>
-                                <option>General Inquiry</option>
-                            </select>
-                        </div>
-
-                        <div>
-                            <label class="form-label">Vehicle / Issue Details</label>
-                            <textarea rows="4" required class="form-input"></textarea>
-                        </div>
-
-                        <button type="submit"
-                            class="w-full py-3 px-4 rounded-xl shadow-lg text-lg font-semibold text-white bg-accent-blue hover:bg-blue-700 transition duration-300">
-                            Submit Service Request
-                        </button>
-                    </form>
-
+                <!-- Name -->
+                <div>
+                    <label class="form-label">Name / Shop Name</label>
+                    <input 
+                        type="text" 
+                        name="name" 
+                        required 
+                        class="form-input" 
+                        placeholder="Enter your name or business name">
                 </div>
 
-            </div>
-        </section>
+                <!-- Email -->
+                <div>
+                    <label class="form-label">Email Address</label>
+                    <input 
+                        type="email" 
+                        name="email" 
+                        required 
+                        class="form-input"
+                        placeholder="example@email.com">
+                </div>
+
+                <!-- Inquiry Type -->
+                <div>
+                    <label class="form-label">Inquiry Type</label>
+                    <select 
+                        name="inquiry" 
+                        required 
+                        class="form-input">
+                        <option value="">-- Select Service Needed --</option>
+                        <option>Advanced Diagnostics</option>
+                        <option>OEM Programming / Coding</option>
+                        <option>Immobilizer / Key Service</option>
+                        <option>Exotic Diagnostics</option>
+                        <option>ADAS Calibration</option>
+                        <option>General Inquiry</option>
+                    </select>
+                </div>
+
+                <!-- Details -->
+                <div>
+                    <label class="form-label">Vehicle / Issue Details</label>
+                    <textarea 
+                        name="details" 
+                        rows="4" 
+                        required 
+                        class="form-input"
+                        placeholder="Vehicle make, model, year, and the issue you're experiencing..."></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit"
+                    class="w-full py-3 px-4 rounded-xl shadow-lg text-lg font-semibold text-white bg-accent-blue hover:bg-blue-700 transition duration-300">
+                    Submit Service Request
+                </button>
+
+            </form>
+            <!-- END FORM -->
+
+        </div>
+
+    </div>
+</section>
 
     </main>
 
