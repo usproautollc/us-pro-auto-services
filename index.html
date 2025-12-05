@@ -353,84 +353,69 @@
         
                 </div>
             </div>
+      </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-tech-mid">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+             <form
+                  action="https://formspree.io/f/mjknojyk"
+                  method="POST"
+                >
+                  <label>
+                    Your email:
+                    <input type="email" name="email">
+                  </label>
+                  <label>
+                    Your message:
+                    <textarea name="message"></textarea>
+                  </label>
+                  <!-- your other form fields go here -->
+                  <button type="submit">Send</button>
+             </form>
+                <div class="text-center mb-12">
+                    <h2 class="text-base text-accent-blue font-semibold tracking-wide uppercase">Contact & Scheduling</h2>
+                    <p class="mt-2 text-3xl font-extrabold text-white sm:text-4xl">
+                        Schedule Your Specialized Service
+                    </p>
+                    <p class="mt-4 text-xl text-gray-400">
+                        Serving independent repair shops, dealerships, fleets, and owners of exotic/luxury vehicles in the greater Sacramento region.
+                    </p>
+                </div>
+
+                <div class="bg-tech-dark p-8 md:p-12 rounded-2xl shadow-xl border border-gray-700">
+                    <form action="#" method="POST" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-300">Name / Shop Name</label>
+                            <input type="text" id="name" name="name" required class="mt-1 block w-full px-4 py-3 border border-gray-600 rounded-lg shadow-sm focus:ring-accent-blue focus:border-accent-blue bg-tech-mid text-white placeholder-gray-500">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-300">Email Address</label>
+                            <input type="email" id="email" name="email" required class="mt-1 block w-full px-4 py-3 border border-gray-600 rounded-lg shadow-sm focus:ring-accent-blue focus:border-accent-blue bg-tech-mid text-white placeholder-gray-500">
+                        </div>
+                        <div>
+                            <label for="inquiry-type" class="block text-sm font-medium text-gray-300">Inquiry Type</label>
+                            <select id="inquiry-type" name="inquiry-type" required class="mt-1 block w-full px-4 py-3 border border-gray-600 rounded-lg shadow-sm focus:ring-accent-blue focus:border-accent-blue bg-tech-mid text-white placeholder-gray-500">
+                                <option class="bg-tech-dark" value="">-- Select Service Needed --</option>
+                                <option class="bg-tech-dark" value="diagnostics">Advanced Diagnostics</option>
+                                <option class="bg-tech-dark" value="oem-programming">OEM Programming / Coding</option>
+                                <option class="bg-tech-dark" value="immobilizer">Immobilizer / Key Service</option>
+                                <option class="bg-tech-dark" value="exotic">High-End & Exotic Diagnostics (Supercars)</option>
+                                <option class="bg-tech-dark" value="adas">ADAS Calibration</option>
+                                <option class="bg-tech-dark" value="general">General Inquiry</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="details" class="block text-sm font-medium text-gray-300">Vehicle Make/Model & Issue Details</label>
+                            <textarea id="details" name="details" rows="4" required class="mt-1 block w-full px-4 py-3 border border-gray-600 rounded-lg shadow-sm focus:ring-accent-blue focus:border-accent-blue bg-tech-mid text-white placeholder-gray-500"></textarea>
+                        </div>
+                        <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-xl shadow-lg text-lg font-semibold text-white bg-accent-blue hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-tech-dark focus:ring-accent-blue transition duration-300 transform hover:scale-[1.01]">
+                            Submit Service Request
+                        </button>
+                    </form>
+                </div>
+            </div>
         </section>
-
-<!-- Contact -->
-<section id="contact" class="py-20 bg-tech-mid">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-
-        <h2 class="section-label">Contact & Scheduling</h2>
-        <p class="section-title">CALL US (916)-542-0828 OR Schedule Your Specialized Service</p>
-        <p class="section-description">Serving Sacramento & surrounding regions.</p>
-
-        <div class="bg-tech-dark p-8 md:p-12 rounded-2xl shadow-xl border border-gray-700 mt-12">
-
-            <!-- FIXED FORM -->
-            <form action="https://formspree.io/f/mjkn0jyk" method="POST" class="space-y-6">
-
-                <!-- Name -->
-                <div>
-                    <label class="form-label">Name / Shop Name</label>
-                    <input 
-                        type="text" 
-                        name="name" 
-                        required 
-                        class="form-input" 
-                        placeholder="Enter your name or business name">
-                </div>
-
-                <!-- Email -->
-                <div>
-                    <label class="form-label">Email Address</label>
-                    <input 
-                        type="email" 
-                        name="email" 
-                        required 
-                        class="form-input"
-                        placeholder="example@email.com">
-                </div>
-
-                <!-- Inquiry Type -->
-                <div>
-                    <label class="form-label">Inquiry Type</label>
-                    <select 
-                        name="inquiry" 
-                        required 
-                        class="form-input">
-                        <option value="">-- Select Service Needed --</option>
-                        <option>Advanced Diagnostics</option>
-                        <option>OEM Programming / Coding</option>
-                        <option>Immobilizer / Key Service</option>
-                        <option>Exotic Diagnostics</option>
-                        <option>ADAS Calibration</option>
-                        <option>General Inquiry</option>
-                    </select>
-                </div>
-
-                <!-- Details -->
-                <div>
-                    <label class="form-label">Vehicle / Issue Details</label>
-                    <textarea 
-                        name="details" 
-                        rows="4" 
-                        required 
-                        class="form-input"
-                        placeholder="Vehicle make, model, year, and the issue you're experiencing..."></textarea>
-                </div>
-
-                <!-- Submit Button -->
-                <button type="submit"
-                    class="w-full py-3 px-4 rounded-xl shadow-lg text-lg font-semibold text-white bg-accent-blue hover:bg-blue-700 transition duration-300">
-                    Submit Service Request
-                </button>
-
-            </form>
-            <!-- END FORM -->
-
-        </div>
-
-    </div>
-</section>
 
     </main>
 
